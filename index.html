@@ -19,7 +19,7 @@
         <h2 class="secao-eventos">Próximos eventos:</h2>
         <ul class="lista-eventos">
           <li>
-            <h3>17/12 - Formatura Colegio D. Pedro</h3>
+            <h3>17/12 - Formatura Colégio D. Pedro</h3>
             <img
               src="img/formatura.jpeg"
               alt="Foto de grupo de alunas celebrando a formatura"
@@ -41,26 +41,74 @@
             </button>
           </li>
           <li>
-            <h3>31/12 - Reveillon da Mamma</h3>
-            <img src="img/reveillon.webp" alt="Foto do evento de reveillon" />
+            <h3>31/12 - Réveillon da Mamma</h3>
+            <img src="img/reveillon.webp" alt="Foto do evento de réveillon" />
             <br />
             <button href="#ingressos">Compre seu ingresso</button>
           </li>
         </ul>
         <h2 class="secao-enquete">
-          Votação para atração musical do Reveillon:
+          Votação para atração musical do Réveillon:
         </h2>
         <div class="enquete">
           <div class="resultados">
             <h3>Resultados Parciais</h3>
-            <ol id="ingressos">
+            <ol>
               <li>DJ (48%)</li>
               <li>Grupo de Pagode (20%)</li>
               <li>Banda de Rock (16%)</li>
             </ol>
           </div>
           <div class="votacao">
-            <!-- TO-DO: Formulário para votar -->
+            <h3>Vote Aqui!</h3>
+            <form>
+              <!--Exemplos de Campos de Digitação:-->
+              <!-- <label for="name">Nome:</label>
+              <input
+                type="text"
+                name="nome"
+                value=""
+                placeholder="Ex.: Teste dos Santos"
+              />
+              <br />
+              <label for="email">E-mail:</label>
+              <input
+                type="email"
+                name="email"
+                value=""
+                placeholder="teste@santos.com"
+              />
+              <br />
+              <label for="senha">Senha:</label>
+              <input type="password" name="senha" />
+              <br />
+              <label for="mensagem">Mensagem:</label><br />
+
+              <textarea name="mensagem" rows="10"></textarea>
+              <br /> -->
+              <!-- <label for="atracao_musical">Atração Musical:</label>
+            <select name="atracao_musical">
+            <option value="dj">Dj</option>
+            <option value="pagode">Grupo de Pagode</option>
+            <option value="dj">Banda de Rock</option>
+            <select> -->
+              <!-- <label for="atracao_musical">Atração Musical:</label><br />
+              <input type="checkbox" name="atracao_musical" value="Dj" />
+              <label for="Dj">Dj</label><br />
+              <input type="checkbox" name="=atracao_musical" value="pagode" />
+              <label for="pagode">Pagode</label><br />
+              <input type="checkbox" name="atracao_musical" value="rock" />
+              <label for="rock">Banda de Rock</label> -->
+              <label for="atracao_musical">Atração Musical:</label><br />
+              <input type="radio" name="atracao_musical" value="Dj" />
+              <label for="Dj">Dj</label><br />
+              <input type="radio" name="atracao_musical" value="pagode" />
+              <label for="pagode">Pagode</label><br />
+              <input type="radio" name="atracao_musical" value="rock" />
+              <label for="rock">Banda de Rock</label>
+
+              <input type="submit" value="Votar" />
+            </form>
           </div>
         </div>
       </div>
