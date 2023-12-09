@@ -61,9 +61,9 @@
           </div>
           <div class="votacao">
             <h3>Vote Aqui!</h3>
-            <form>
-              <!--Exemplos de Campos de Digitação:-->
-              <!-- <label for="name">Nome:</label>
+
+            <!--Exemplos de Campos de Digitação:-->
+            <!-- <label for="name">Nome:</label>
               <input
                 type="text"
                 name="nome"
@@ -86,28 +86,42 @@
 
               <textarea name="mensagem" rows="10"></textarea>
               <br /> -->
-              <!-- <label for="atracao_musical">Atração Musical:</label>
+            <!-- <label for="atracao_musical">Atração Musical:</label>
             <select name="atracao_musical">
             <option value="dj">Dj</option>
             <option value="pagode">Grupo de Pagode</option>
             <option value="dj">Banda de Rock</option>
             <select> -->
-              <!-- <label for="atracao_musical">Atração Musical:</label><br />
+            <!-- <label for="atracao_musical">Atração Musical:</label><br />
               <input type="checkbox" name="atracao_musical" value="Dj" />
               <label for="Dj">Dj</label><br />
               <input type="checkbox" name="=atracao_musical" value="pagode" />
               <label for="pagode">Pagode</label><br />
               <input type="checkbox" name="atracao_musical" value="rock" />
               <label for="rock">Banda de Rock</label> -->
-              <label for="atracao_musical">Atração Musical:</label><br />
-              <input type="radio" name="atracao_musical" value="Dj" />
-              <label for="Dj">Dj</label><br />
-              <input type="radio" name="atracao_musical" value="pagode" />
-              <label for="pagode">Pagode</label><br />
-              <input type="radio" name="atracao_musical" value="rock" />
-              <label for="rock">Banda de Rock</label>
-
-              <input type="submit" value="Votar" />
+            <form action="#" method="get">
+              <div class="formbox">
+                <input type="radio" name="atracao_musical" value="Dj" />
+                <label for="Dj">Dj</label>
+              </div>
+              <div class="formbox">
+                <input type="radio" name="atracao_musical" value="pagode" />
+                <label for="pagode">Pagode</label>
+              </div>
+              <div class="formbox">
+                <input type="radio" name="atracao_musical" value="rock" />
+                <label for="rock">Banda de Rock</label>
+              </div>
+              <div class="formbox">
+                <input type="radio" name="atracao_musical" value="outro" />
+                <label for="outro">Outro. Qual?</label>
+                <input
+                  type="text"
+                  name="outra_atração"
+                  placeholder="Digite qual atração musical você quer"
+                />
+              </div>
+              <input type="submit" class="btn-form" value="Votar" />
             </form>
           </div>
         </div>
