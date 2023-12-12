@@ -44,6 +44,11 @@ a {
   height: 120px;
 }
 
+#conteudo {
+  /* faz com que o rodapé não suba */
+  min-height: calc(100vh - 240px);
+}
+
 h1 {
   font-family: "Playfair Display", serif;
   padding-top: 58px;
@@ -104,11 +109,17 @@ h2 {
   width: calc(
     100% - 30px
   ); /* o calc serve para fazer cálculos matemáticos de valores */
+  /* Para deixar a foto do dia 31/12 igual as outras usamos a função aspect-ratio que deixa todas na mesma proporção */
+  aspect-ratio: 16/9;
 }
 
-.lista-eventos button {
+/* Botão de "clique para ver detalhes" do dias 17/12 */
+
+.lista-eventos a {
+  display: block;
   margin: 15px;
   width: calc(100% - 30px);
+  line-height: 36px; /* colocou o "clique para ver detalhes" ao centro do botão */
   height: 36px;
   background-color: #1f0049;
   color: white;
@@ -178,4 +189,12 @@ h2 {
   color: #ffffff;
   text-align: center;
   border-radius: 18px;
+}
+#rodape {
+  width: 100%;
+  padding-top: 45px;
+  height: 75px;
+  background-color: #1f0049;
+  color: #ffffff;
+  font-size: 1.25em;
 }
