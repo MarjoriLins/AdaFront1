@@ -34,18 +34,43 @@ a {
   margin: auto;
 }
 
-#cabecalho {
+header {
   width: 100%;
   height: 120px;
   background-color: #1f0049;
+}
+
+header .container {
+  display: flex;
+}
+
+.logo-content {
+  width: 33.33%;
 }
 
 .logo {
   height: 120px;
 }
 
-#conteudo {
-  /* faz com que o rodapé não suba */
+nav {
+  width: 66.67%;
+}
+
+.menu {
+  display: flex;
+  padding-top: 50px;
+  justify-content: end;
+}
+
+.menu li a {
+  color: #e2d8a5;
+}
+
+.menu li a:hover {
+  color: #6f9f9c;
+}
+
+main {
   min-height: calc(100vh - 240px);
 }
 
@@ -64,7 +89,8 @@ h1 {
   color: #6f9f9c;
 }
 
-h2 {
+#eventos h2,
+#pesquisa h2 {
   font-family: "Playfair Display", serif;
   font-size: 24px;
   padding: 12px 0 12px 0;
@@ -72,18 +98,14 @@ h2 {
   color: #6f9f9c;
 }
 
-.lista-eventos {
+#eventos ul {
   display: flex;
   flex-direction: row;
-  /*  PRATICANDO FLEXBOX */
-  /* flex-direction: row-reverse; */
-  /* flex-direction: column; */
-  /* flex-direction: column-reverse; */
   gap: 10px;
   padding: 20px 0 40px 0;
 }
 
-.lista-eventos li {
+#eventos ul li {
   width: 360px;
   min-height: 320px;
   background-color: #ffffff;
@@ -92,34 +114,27 @@ h2 {
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
 }
 
-.lista-eventos li:first-child {
-  background-color: gold;
-}
-
-.lista-eventos h3 {
+#eventos ul li h3 {
   font-family: "Playfair Display", serif;
   font-size: 18px;
   padding: 15px 15px 0 15px;
   font-weight: 300;
-  line-height: 150%; /* com porcentagem também funciona */
+  line-height: 150%; /* com percentual também funciona */
 }
 
-.lista-eventos img {
+#eventos ul li img {
   padding: 15px;
   width: calc(
     100% - 30px
   ); /* o calc serve para fazer cálculos matemáticos de valores */
-  /* Para deixar a foto do dia 31/12 igual as outras usamos a função aspect-ratio que deixa todas na mesma proporção */
   aspect-ratio: 16/9;
 }
 
-/* Botão de "clique para ver detalhes" do dias 17/12 */
-
-.lista-eventos a {
+#eventos ul li a {
   display: block;
   margin: 15px;
   width: calc(100% - 30px);
-  line-height: 36px; /* colocou o "clique para ver detalhes" ao centro do botão */
+  line-height: 36px;
   height: 36px;
   background-color: #1f0049;
   color: white;
@@ -128,11 +143,7 @@ h2 {
   cursor: pointer;
 }
 
-.lista-eventos button:hover {
-  background-color: #6f9f9c;
-}
-
-.enquete {
+#pesquisa .enquete {
   display: flex;
   gap: 10px;
   padding-bottom: 80px;
@@ -179,8 +190,9 @@ h2 {
 .votacao input[type="text"] {
   font-size: 12px;
   margin-left: 10px;
-  width: 300px;
+  width: 250px;
 }
+
 .btn-form {
   width: calc(100% - 60px);
   margin: 10px 0 10px 0;
@@ -190,11 +202,79 @@ h2 {
   text-align: center;
   border-radius: 18px;
 }
-#rodape {
+
+footer {
   width: 100%;
   padding-top: 45px;
   height: 75px;
   background-color: #1f0049;
   color: #ffffff;
   font-size: 1.25em;
+}
+
+.somente-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .somente-desktop {
+    display: none !important;
+  }
+  .somente-mobile {
+    display: block;
+  }
+  .container {
+    width: 100vw;
+  }
+  body {
+    width: 100%;
+  }
+
+  #eventos ul {
+    display: block;
+    padding-top: 0px;
+  }
+  #eventos ul li {
+    width: calc(100% - 60px);
+    margin-bottom: 20px;
+  }
+  .enquete {
+    display: block !important;
+  }
+  .resultados,
+  .votacao {
+    margin-left: 30px;
+    width: calc(100% - 60px);
+    margin-bottom: 20px;
+  }
+
+  main {
+    max-width: 100%;
+  }
+
+  main h1,
+  main .slogan {
+    text-align: center;
+  }
+
+  .slogan {
+    font-size: 1.25em;
+    padding-top: 0;
+  }
+
+  #eventos h2,
+  #pesquisa h2 {
+    padding-left: 30px;
+    color: #1f0049;
+  }
+
+  .votacao input[type="text"] {
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+
+  footer p {
+    text-align: center;
+    font-size: 0.75em;
+  }
 }

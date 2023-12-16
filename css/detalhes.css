@@ -46,13 +46,13 @@ h3 {
   font-size: 18px;
   padding-top: 15px;
   font-weight: 300;
-  line-height: 150%; /* com porcentual também funciona também funciona */
+  line-height: 150%; /* com porcentagem também funciona */
 }
 
 p {
   font-size: 1em;
   line-height: 1.5em;
-  text-align: justify; /* justificado o texto */
+  text-align: justify;
 }
 
 a {
